@@ -1,0 +1,329 @@
+/*
+    Card style
+*/
+
+.card-container {
+    width: 350px;
+    height: 250px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    color: white;
+    position: relative;
+    transition: transform .5s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgb(77, 77, 77), rgb(42, 42, 42));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.back {
+    font-size: 18px;
+    padding: 1.25rem;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(8, 128, 8);
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+
+/*
+    Main Section
+*/
+
+main {
+    width: 100vw;
+    height: 80vh;
+    background: linear-gradient(45deg, rgb(77, 77, 77), rgb(42, 42, 42));
+    color: #eee;
+    position: relative;
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 90%); */
+    overflow: hidden;
+}
+
+header div {
+    background-image: url('../assets/profile_img.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+header h4 {
+    font-size: 1.25rem;
+}
+
+header {
+    padding-top: .75rem;
+    padding-left: 1.5rem;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+main section {
+    padding: .5rem;
+    margin-top: 4rem;
+}
+
+main section h1 {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+main article {
+    margin-top: 4rem;
+    padding-left: .75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+main article h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+main article ul {
+    transform: translate(30px);
+}
+
+main article ul li {
+    margin-bottom: .5rem;
+}
+
+main article span {
+    position: absolute;
+    bottom: -10px;
+    font-size: 7rem;
+    font-weight: lighter;
+}
+
+.material-symbols-outlined {
+    color: rgb(8, 128, 8);
+    position: absolute;
+    bottom: 30%;
+    right: 5%;
+    transform: scale(30);
+    z-index: 1;
+}
+
+.idei-generale {
+    margin-top: 4rem;
+}
+
+.idei-generale h1 {
+    position: relative;
+    width: fit-content;
+    margin-inline: auto;
+    margin-bottom: 4rem;
+}
+
+.idei-generale h1::after,
+.idei-generale h1::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #333;
+}
+
+.idei-generale h1::after {
+    top: 50%;
+    left: -20%;
+}
+
+.idei-generale h1::before {
+    top: 50%;
+    right: -20%;
+}
+
+.idei-generale .info {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.analiza {
+    margin-top: 4rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.secunda {
+    margin-top: 2.5rem;
+    overflow-y: hidden;
+}
+
+.analiza h1 {
+    margin-bottom: 2.5rem;
+    width: fit-content;
+    margin-inline: auto;
+    position: relative;
+}
+
+.analiza h1::after,
+.analiza h1::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #333;
+}
+
+.analiza h1::after {
+    top: 50%;
+    left: -15%;
+}
+
+.analiza h1::before {
+    top: 50%;
+    right: -15%;
+}
+
+.analiza p {
+    padding: 1rem .75rem;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.analiza p span {
+    font-weight: bold;
+}
+
+.analiza .decor-cerc {
+    width: 250px;
+    height: 150px;
+    background-color: rgba(28, 216, 28, 0.404);
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: -150px;
+    z-index: -1;
+}
+
+.analiza .decor-cerc-invers {
+    width: 250px;
+    height: 100px;
+    background-color: rgba(28, 216, 28, 0.404);
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    right: -150px;
+    z-index: -1;
+}
+
+#override {
+    transform: scale(1);
+    position: relative;
+}
+
+footer {
+    overflow-x: hidden;
+    color: #eee;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+}
+
+footer section {
+    background: linear-gradient(45deg, rgb(77, 77, 77), rgb(42, 42, 42));
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+footer button {
+    background: transparent;
+    border: 1px solid rgb(8, 128, 8);
+    border-radius: 25px;
+    color: rgb(8, 128, 8);
+    padding: .5rem 1rem;
+    font-size: 18px;
+    width: fit-content;
+    margin-inline: auto;
+    margin-bottom: 2.5rem;
+    margin-top: 1rem;
+    transition: background-color .5s ease-out, color .5s ease-out;
+}
+
+footer button:focus,
+footer button:hover {
+    background-color: rgb(8, 128, 8);
+    color: #eee;
+}
+
+footer button:hover {
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    opacity: .9;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    display: flex;
+    transition: transform .5s ease-out;
+    transform: translateX(-100%);
+}
+
+.modal .content {
+    background: url('../assets/Carte\ vizita.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 350px;
+    height: 200px;
+    position: relative;
+    z-index: 11;
+    transition: opacity .3s ease-out;
+    opacity: 0;
+}
+
+#close-btn {
+    transform: scale(2);
+    color: red;
+    position: relative;
+    top: -25%;
+    right: -35%;
+    z-index: 15;
+    transition: opacity .3s ease-out;
+    opacity: 0;
+}
+
+#close-btn:hover {
+    cursor: pointer;
+}

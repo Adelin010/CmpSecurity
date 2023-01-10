@@ -1,0 +1,59 @@
+@media screen and (min-width: 790px) {
+    html {
+        font-size: 30px;
+    }
+    .container-tab {
+        width: 80%;
+        margin-inline: auto;
+    }
+    .front {
+        padding: .5rem 1rem;
+        text-align: center;
+    }
+    .card-container {
+        width: 500px;
+        height: 400px;
+    }
+    .back {
+        font-size: 26px;
+    }
+    .front,
+    .back {
+        border-radius: 25px;
+    }
+    main section h1 {
+        width: 80%;
+        margin-inline: auto;
+    }
+    main header {
+        padding: 1rem 1.5rem;
+    }
+    main header div {
+        width: 100px;
+        height: 100px;
+    }
+    #override {
+        transform: scale(2) translateY(25%);
+    }
+    footer {
+        margin-bottom: 0;
+    }
+    .analiza p {
+        font-size: inherit;
+        line-height: 45px;
+    }
+    footer button {
+        font-size: inherit;
+    }
+    .modal .content {
+        width: 600px;
+        height: 450px;
+        background-size: contain;
+    }
+    #close-btn {
+        transform: scale(3) translateY(30px);
+    }
+    .analiza .decor-cerc-invers {
+        top: 30%;
+    }
+}
